@@ -1,0 +1,43 @@
+@media screen and (max-width: 575px) {
+    .mobileContainer {
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        z-index: 1000; /* Ensures the menu stays on top */
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+        border-radius: 12px;
+    }
+    
+    .mobileContainer a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-size: 17px;
+        color: gray;
+        transition: color 0.2s ease-in-out;
+    }
+    
+    .mobileContainer.icon {
+        font-size: 22px;
+        transition: font-size 0.2s ease-in-out;
+        z-index: 1001; /* Ensures icons are visible */
+    }
+    
+    .mobileContainer a.active .icon {
+        color: #E91E63;
+    }
+    
+    .mobileContainer a.active {
+        color: #E91E63;
+    }
+    
+}
+
+
+

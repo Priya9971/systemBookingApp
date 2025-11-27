@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
+
+.boxModel {
+  background: #031323;
+  overflow: hidden;
+  border-radius: 20px;
+  font-family: "El Messiri", sans-serif;
+}
+
+.fas {
+  width: 32px;
+}
+.modelPop {
+  min-height: 46vh;
+  // background: linear-gradient(135deg, #1e3c72, #2a5298);
+  // background: linear-gradient(135deg, #1e3c72, #2a5298);
+  animation: gradient 8s ease infinite;
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+}
+
+.boxModel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.box {
+  position: relative;
+
+  .square {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 29px;
+    animation: square 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+  }
+
+  @keyframes square {
+    0%,
+    100% {
+      transform: translateY(-20px);
+    }
+
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+  .square:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: -15px;
+    right: -45px;
+  }
+
+  .square:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 105px;
+    left: -103px;
+    z-index: 2;
+  }
+
+  .square:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    bottom: 85px;
+    right: -45px;
+    z-index: 2;
+  }
+
+  .square:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    bottom: 35px;
+    left: -95px;
+  }
+
+  .square:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    left: -40px;
+  }
+
+  .square:nth-child(6) {
+    width: 85px;
+    height: 85px;
+    top: 165px;
+    right: -155px;
+    z-index: 2;
+  }
+}
+
+.left {
+  float: left;
+  position: relative;
+  padding: 15px;
+  width: 270px;
+  min-height: 377px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  margin-top: 18px;
+}
+
+.left h2 {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center !important;
+}
+.left p {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center !important;
+  margin: 0;
+}
+
+.left .cartoonImg {
+  position: relative;
+  width: 100%;
+  height: 378px;
+  border-radius: 10px;
+  background-image: url("/images/Untitled design1.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.boxContainer {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 12px;
+  width: 289px;
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.2);
+  float: right;
+}
+
+.boxContainer::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 2%
+  );
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .inputBx {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 10px;
+      padding-left: 40px;
+      border-radius: 15px;
+      color: #fff;
+      font-size: 13px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .password-control {
+      position: absolute;
+      top: 19px;
+      right: 32px;
+      display: inline;
+      width: 20px;
+      height: 20px;
+      background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+      // transition: 0.5s;
+    }
+
+    .view {
+      background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+      transition: 0.5s;
+    }
+
+    .fas {
+      position: absolute;
+      top: 22px;
+      left: 13px;
+    }
+
+    input[type="submit"] {
+      background: #cc2e65;
+      color: #fff;
+      font-size: 15px;
+      font-weight:700;
+      max-width: 100%;
+      padding: 8px 10px;
+      box-shadow: none;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 1.5s;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(115deg, 
+        rgba(0,0,0,0.10), 
+        rgba(255,255,255,0.25));
+      color: #fff;
+      transition: .5s;
+      border: 1px solid #fff;
+    }
+    input::placeholder {
+      color: #fff;
+    }
+
+
+    span {
+      position: absolute;
+      top:8px;
+      left: 30px;
+      padding: 9px;
+      display: inline;
+      color: #fff;
+      transition: 0.5s;
+      pointer-events: none;
+      font-size: 13px;
+    }
+
+    input:focus ~ span,
+    input:valid ~ span {
+      transform: translateX(-30px) translateY(-25px);
+      font-size: 12px;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      background-color: #0967f2;
+      background:#fff;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

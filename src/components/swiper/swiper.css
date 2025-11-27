@@ -1,0 +1,80 @@
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* margin-top: 72px; */
+  border-radius: 11px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 600px; /* Default height for desktop */
+  object-fit: cover;
+}
+
+/* Autoplay progress indicator */
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 28px;
+  height: 30px;
+  display: flex;
+  font-size: 11px;
+  align-items: center;
+  justify-content: center;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  /* stroke: var(--swiper-theme-color); */
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .swiper-slide img {
+      height: 100%; /* Tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+      height: 100%; /* Small Screens */
+  }
+  .swiper {
+      margin-top: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide img {
+      height: 100; /* Mobile */
+  }
+
+  .swiper {
+      margin-top: 72px;
+  }
+}
